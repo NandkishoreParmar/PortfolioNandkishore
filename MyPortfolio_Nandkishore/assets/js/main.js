@@ -85,3 +85,22 @@ const showMenu = ( toggleId, navId ) => {
   /*SCROLL CONTACT*/
   // sr.reveal(".contact-input", { interval: 200 });
   
+  /*===== Resume open in new tab and download also in same time  =====*/
+  document.getElementById("resume-button").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Open the resume in a new tab
+    const viewUrl = "https://drive.google.com/file/d/1DidZSOOK3a1enxaMMTkaOYvf4OHhhzIl/view?usp=sharing";
+    window.open(viewUrl, "_blank");
+
+    // Trigger the download
+    setTimeout(() => {
+      const downloadUrl = "https://drive.google.com/uc?export=download&id=1DidZSOOK3a1enxaMMTkaOYvf4OHhhzIl";
+      const anchor = document.createElement("a");
+      anchor.href = downloadUrl;
+      anchor.download = "Resume.pdf";
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.body.removeChild(anchor);
+    }, 1000); // Delay to ensure the tab opens first
+  });
