@@ -90,12 +90,12 @@ const showMenu = ( toggleId, navId ) => {
     e.preventDefault();
 
     // Open the resume in a new tab
-    const viewUrl = "https://drive.google.com/file/d/1DidZSOOK3a1enxaMMTkaOYvf4OHhhzIl/view?usp=sharing";
+    const viewUrl = "https://drive.google.com/file/d/1BwH1cd7icId_kZDqAFgygBPTbdfy9hQd/view?usp=sharing";
     window.open(viewUrl, "_blank");
 
     // Trigger the download
     setTimeout(() => {
-      const downloadUrl = "https://drive.google.com/uc?export=download&id=1DidZSOOK3a1enxaMMTkaOYvf4OHhhzIl";
+      const downloadUrl = "https://drive.google.com/uc?export=download&id=1BwH1cd7icId_kZDqAFgygBPTbdfy9hQd";
       const anchor = document.createElement("a");
       anchor.href = downloadUrl;
       anchor.download = "Resume.pdf";
